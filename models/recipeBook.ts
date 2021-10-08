@@ -1,6 +1,5 @@
 import {DataTypes} from 'sequelize';
 import db from '../db/connection';
-import usuario from './user';
 
 const recipeBook = db.define('RecipeBook',{
     name: {
@@ -10,6 +9,6 @@ const recipeBook = db.define('RecipeBook',{
 }, 
 {
     timestamps:false
-})
+});
 
 export default recipeBook;

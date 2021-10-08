@@ -1,5 +1,4 @@
 import  {Request, Response} from 'express';
-import {Op} from 'sequelize'
 import usuario from '../models/user';
 
 export const getUsers = async (req: Request, res: Response)=>{

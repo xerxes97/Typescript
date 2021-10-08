@@ -1,6 +1,4 @@
 import {Sequelize} from 'sequelize'
-const fs = require('fs')
-const path = require('path')
 
 const db = new Sequelize('cooking', 'postgres', 'xerxes',{
     host: 'localhost',
@@ -8,5 +6,7 @@ const db = new Sequelize('cooking', 'postgres', 'xerxes',{
     logging: false,
     native:false
 });
+
+console.log('prueba ',db.models)
 
 export default db;

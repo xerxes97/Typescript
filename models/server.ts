@@ -13,6 +13,7 @@ class Server{
     }
 
     constructor(){
+        console.log(db.models)
         this.app = express();
         this.port = process.env.PORT || '3001';
         this.app.use(morgan('dev'))
@@ -35,6 +36,7 @@ class Server{
 
     async dbConnection(){
         try {
+            console.log(db.models)
             db.sync({force:true})
             await db.authenticate();
             console.log('Funciona la coneccion')
